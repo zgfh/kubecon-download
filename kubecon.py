@@ -13,7 +13,7 @@ import requests
 import os
 import logging
 from bs4 import BeautifulSoup
-from urlparse import urljoin
+from urllib.parse import urljoin
 
 LOG = logging.getLogger(__name__)
 
@@ -57,8 +57,7 @@ def evnet(url, resut_dir=''):
             LOG.exception(u"Download File={} error:".format(file))
 
 
-def Main(resut_dir='events',
-         urls=URL):
+def Main(resut_dir='events', urls=URL):
     for url_page in urls:
         res = requests.get(url_page)
         soup = BeautifulSoup(res.content, 'html5lib')
