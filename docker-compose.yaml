@@ -1,0 +1,5 @@
+kubecon:
+  build: .
+  command: python kubecon-2019-11-en.py
+  volumes:
+    - ./events:/usr/src/app/events
