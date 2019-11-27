@@ -12,5 +12,6 @@ import kubecon
 
 if __name__ == '__main__':
     kubecon.Main('events', [
-        "https://kccncna19.sched.com/?iframe=no"])
+        "https://kccncna19.sched.com/2019-11-{}/overview?iframe=no&w=100%&sidebar=yes&bg=no".format(day) for day
+        in ["18", "19", "20", "21"]])
     pass
